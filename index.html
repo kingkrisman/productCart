@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts Menu</title>
+   <link rel="shortcut icon" href="assets\images\favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <section class="desserts-section">
+        <div class="content-wrapper">
+            <div class="desserts-menu">
+                <h2 class="desserts-title">Desserts</h2>
+                <div class="desserts-grid" id="dessertsGrid"></div>
+            </div>
+            <aside class="cart-section">
+                <div class="cart-content">
+                    <h2 class="cart-title">Your Cart (<span id="cartCount">0</span>)</h2>
+                    <ul class="cart-items" id="cartItemsList"></ul>
+                </div>
+                <div class="order-summary">
+                    <div class="order-total-wrapper">
+                        <div class="order-total-inner">
+                            <div class="order-total-row">
+                                <p class="order-total-label">Order Total</p>
+                                <p class="order-total-amount" id="orderTotalAmount">$0.00</p>
+                            </div>
+                        </div>
+                        <p class="carbon-neutral-delivery">This is a carbon-neutral delivery</p>
+                    </div>
+                    <button class="confirm-order-button">Confirm Order</button>
+                </div>
+            </aside>
+        </div>
+
+
+
+
+
+
+        
+    </section>
+
+
+
+
+    <!-- Order Confirmation Modal -->
+<div id="orderConfirmationModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 class="order-con">Order Confirmed</h2>
+        <p style="margin-top: -10px;">We hope you enjoy your food!</p>
+
+    
+        <ul id="orderDetailsList"></ul>
+
+        <div class="order-total-row">
+            <p class="order-total-label">Order Total</p>
+            <p class="order-total-amount" id="modalOrderTotalAmount">$0.00</p>
+        </div>
+        
+        <button class="newOrder" onclick="startNewOrder()">Start New Order</button>
+    </div>
+</div>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
